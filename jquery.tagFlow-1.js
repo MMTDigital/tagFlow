@@ -1,19 +1,19 @@
 jQuery(document).ready(function(){
     jQuery('*[data-tagflow]').each(function(index){
         var context = jQuery(this);
-        var padding = parseInt(context.attr('data-tagFlow-padding'));
-        var margin = parseInt(context.attr('data-tagFlow-margin'));
-        context.attr('data-tagFLow-id', index);
+        var padding = parseInt(context.attr('data-tagflow-padding'));
+        var margin = parseInt(context.attr('data-tagflow-margin'));
+        context.attr('data-tagflow-id', index);
         context.find('a').each(function(){
             $(this)
-                .attr('data-tagFlow-width', 0)
+                .attr('data-tagflow-width', 0)
                 .css({'padding':padding + 'px', 'margin':margin + 'px'})
         });
         context.resizeTags = function(){
             var contextWidth = this.innerWidth();
-            var contextId = this.attr('data-tagFlow-id');
-            var padding = parseInt(this.attr('data-tagFlow-padding'));
-            var margin = parseInt(this.attr('data-tagFlow-margin'));
+            var contextId = this.attr('data-tagflow-id');
+            var padding = parseInt(this.attr('data-tagflow-padding'));
+            var margin = parseInt(this.attr('data-tagflow-margin'));
             var sizes = [];
             var widthSum = 0;
             var rows = [];
@@ -22,11 +22,11 @@ jQuery(document).ready(function(){
             var aCount = 0;
             this.find('a').each(function(i){
                 var aObj = jQuery(this);
-                if (aObj.attr('data-tagFlow-width') == 0)
+                if (aObj.attr('data-tagflow-width') == 0)
                 {
-                    aObj.attr('data-tagFlow-width',parseInt(aObj.outerWidth()));
+                    aObj.attr('data-tagflow-width',parseInt(aObj.outerWidth()));
                 }
-                var aWidth = parseInt(aObj.attr('data-tagFlow-width'));
+                var aWidth = parseInt(aObj.attr('data-tagflow-width'));
                 var totalASize = aWidth+(padding*2)+(margin*2);
                 if (widthSum + totalASize < contextWidth)
                 {
@@ -51,9 +51,9 @@ jQuery(document).ready(function(){
                     var addWidth = (Math.floor(((difference/rowlength))+offset));
                     for (var b=0; b<rowlength; b++)
                     {
-                        var aObjTemp = jQuery('[data-tagFLow-id=' + contextId + '] a:eq(' + rows[rowCount][b].id +')');
+                        var aObjTemp = jQuery('[data-tagflow-id=' + contextId + '] a:eq(' + rows[rowCount][b].id +')');
 
-                        pL = Math.ceil(parseInt(aObjTemp.attr('data-tagFlow-width')) + addWidth);
+                        pL = Math.ceil(parseInt(aObjTemp.attr('data-tagflow-width')) + addWidth);
                         aObjTemp.css('width',pL + 'px');
                     }
                     rowCount++;
