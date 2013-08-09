@@ -1,0 +1,16 @@
+[data-tagFlow]{width: 100%;}
+[data-tagFlow] a, [data-tagFlow] a:link, [data-tagFlow] a:active, [data-tagFlow] a:visited
+{
+	float: left;
+	background: #8fa350;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	border: none;
+}
+[data-tagFlow] a:hover
+{
+	background-color: #bcbec0;
+}
