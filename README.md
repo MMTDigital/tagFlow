@@ -4,14 +4,14 @@ tagFlow
 A jquery plugin to auto size anchor tags for responsive webpages.
 
 
-USAGE...
+#### USAGE...
 
 Include the js and css file.
 
-&lt;div data-tagflow data-tagflow-padding="5" data-tagflow-margin="2"&gt;<br>
- &lt;a href="">AWARDS&lt;/a&gt;<br>
- &lt;a href="">INTERNATIONAL&lt;/a&gt;<br>
-&lt;/div&gt;<br> 
+    <div data-tagflow data-tagflow-padding="5" data-tagflow-margin="2">
+     <a href="">AWARDS</a>
+     <a href="">INTERNATIONAL</a>
+    </div> 
 
 data-tagflow  - tagFlow hook to initialise tag container.<br>
 data-tagflow-padding  - padding for each anchor<br>
